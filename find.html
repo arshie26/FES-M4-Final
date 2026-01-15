@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/69b822bc74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./find.css">
+    <script src="find.js"></script>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+            <div class="nav__container">
+                <figure class="icon__container">
+                    <img class="icon" src="blinker-icon.png">
+                </figure>
+                <ul class="nav__links">
+                    <li>
+                        <a class="
+                        nav__link
+                        link__hover--effect">Home</a>
+                    </li>
+                    <li>
+                        <a class="
+                        nav__link
+                        link__hover--effect">Find your car</a>
+                    </li>
+                    <li>
+                        <a class="
+                        nav__link
+                        link__hover--effect
+                        nav__link--primary">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn__menu btn__menu--open" onclick = "openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav__mobile">
+                    <button class="btn__menu btn__menu--close" onclick = "closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="mobile__nav--links">
+                        <li>
+                            <a class="
+                            nav__link
+                            link__hover--effect">Home</a>
+                        </li>
+                        <li>
+                            <a class="
+                            nav__link
+                            link__hover--effect">Find your car</a>
+                        </li>
+                        <li>
+                            <a class="
+                            nav__link
+                            link__hover--effect
+                            nav__link--primary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="browse__container">
+                <h1 class="hero__title">Browse our cars</h1>
+                <input class="search" placeholder="Search by Make, Model or Keyword" oninput="getMovies(event)">
+        </div>
+        <div class="overlay">    
+        </div>
+    </section>
+    <section id="results">
+        <h2 class="results__title">Search results: </h2>
+        <div class="spinner__container">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="img__container">
+                    <img class="img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg">
+                </div>
+                <div class="description">
+                    <h5 class="title">Suits</h5>
+                    <div>
+
+                        <i class="fa-solid fa-calendar desc__icon"></i>
+                        <p class="year">2011-2019</p>
+                    </div>
+                    <div>
+
+                        <i class="fa-regular fa-id-badge desc__icon"></i>
+                        <p class="imdbID">tt239402</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-tv desc__icon"></i>
+                        <p class="type">series</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+</body>
+</html>
