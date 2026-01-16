@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/69b822bc74.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./find.css">
-    <script src="find.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="find.js" defer></script>
 </head>
 <body>
     <section id="landing">
@@ -70,11 +70,12 @@
     </section>
     <section id="results">
         <h2 class="results__title">Search results: </h2>
-        <div class="spinner__container">
-            <i class="fas fa-spinner movies__loading--spinner"></i>
-        </div>
+        
         <div class="cards">
-            <div class="card">
+            <div class="spinner__container">
+                <i class="fas fa-spinner movies__loading--spinner"></i>
+            </div>
+            <!--div class="card">
                 <div class="img__container">
                     <img class="img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg">
                 </div>
@@ -95,7 +96,7 @@
                         <p class="type">series</p>
                     </div>
                 </div>
-            </div> 
+            </div--> 
         </div>
     </section>
 </body>

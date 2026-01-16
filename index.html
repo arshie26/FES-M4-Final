@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/69b822bc74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="find.js" defer></script>
+</head>
+<body>
+    <section id="home">
+        <nav>
+            <div class="nav__container">
+                <div class="icon__container">
+                    <img class="icon" src="blinker-icon.png">
+                </div>
+                <ul class="nav__links">
+                    <li>
+                        <a class="
+                        nav__link--home
+                        link__hover--effect">Home</a>
+                    </li>
+                    <li>
+                        <a class="
+                        nav__link--home
+                        link__hover--effect">Find your car</a>
+                    </li>
+                    <li>
+                        <a class="
+                        nav__link--home
+                        link__hover--effect
+                        nav__link--primary">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn__menu btn__menu--open" onclick = "openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav__mobile">
+                    <button class="btn__menu btn__menu--close" onclick = "closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="mobile__nav--links">
+                        <li>
+                            <a class="
+                            nav__link">Home</a>
+                        </li>
+                        <li>
+                            <a class="
+                            nav__link">Find your car</a>
+                        </li>
+                        <li>
+                            <a class="
+                            nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="home__title">Australia's most awarded car subscription platform</h1>
+                <h2 class="home__subtitle">FIND YOUR DREAM CAR WITH <span class="purple">BLINKER</span></h2>
+                <div class="home__search--container">
+                    <input class="home__search" placeholder="Search by Model, Make or Keyword">
+                    <button class="search__button" onclick = "searchFromHome(event)">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="home__img--container">
+                    <img class="home__image" src="./building.png">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

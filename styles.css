@@ -11,6 +11,12 @@ i{
     font-size: 20px;
 }
 
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* LANDING */
 
 #landing{
@@ -18,6 +24,12 @@ i{
     flex-direction: column;
     align-items: center;
     height: 45vh;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .overlay{
@@ -45,15 +57,10 @@ i{
 
 /* NAVIGATION */
 
-nav{
-    display: flex;
-}
-
 .nav__container{
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
-    width: 100%;
     margin: 24px;
 }
 
@@ -77,6 +84,11 @@ li{
 
 .nav__link{
     color: white;
+    margin-left: 40px;
+}
+
+.nav__link--home{
+    color: black;
     margin-left: 40px;
 }
 
@@ -110,9 +122,12 @@ li{
     width: 100%;
     height: 100%;
     opacity: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all 400ms ease;
 }
 
 .nav__mobile .mobile__nav--links{
@@ -150,6 +165,40 @@ li{
     margin: 0
 }
 
+
+/* HOME PAGE HERO */
+
+.hero__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__container{
+    width: 70%;
+    text-align: center;
+}
+
+.home__title{
+    color: purple;
+    font-size: 50px;
+    text-align: center;
+    width: 80%;
+}
+
+.home__subtitle{
+    color: purple;
+    font-size: 30px;
+}
+
+.purple{
+    color: purple;
+}
+
+.home__title, .home__subtitle, .home__search--container{
+    margin: 20px 0;
+}
+
 /* HERO CONTENT */
 
 .hero__title{
@@ -172,6 +221,39 @@ li{
     border-radius: 30px;
 }
 
+/* HOME PAGE HERO */
+
+.home__search--container{
+    display: flex;
+    width: 70%;
+}
+
+.home__search{
+    padding: 25px 0;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.fa-solid{
+    font-size: 40px;
+    filter: invert(1);
+}
+
+.search__button{
+    padding: 15px 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+/* HOME PAGE IMAGE */
+
+.home__img--container{
+    width: 50%;
+}
+
+.home__image{
+    width: 100%;
+}
 
 /* RESULTS */
 
@@ -184,6 +266,20 @@ li{
 .spinner__container{
     display: flex;
     justify-content: center;
+}
+
+.movies__loading--spinner{
+    animation: spin 400ms infinite linear;
+}
+
+@keyframes spin {
+    50%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .results__title{
@@ -264,13 +360,24 @@ li{
 
     .open__menu .nav__mobile{
         opacity: 0.9;
-        display: flex;
+        transform: translateX(0);
     }
 
     .btn__menu--open{
         display: flex;
     }
 
+}
+
+@media (max-width: 584px){
+    .home__title{
+        text-align: left;
+    }
+
+    .home__search--container{
+        flex-direction: column;
+        width: 95%;
+    }
 }
 
 @media (max-width: 500px){
