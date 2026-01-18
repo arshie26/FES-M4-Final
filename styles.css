@@ -229,9 +229,10 @@ li{
 }
 
 .home__search{
-    padding: 25px 0;
+    padding: 20px 30px;
     border-radius: 20px;
     width: 100%;
+    font-size: 24px;
 }
 
 .fa-solid{
@@ -242,7 +243,9 @@ li{
 .search__button{
     padding: 15px 50px;
     border-radius: 20px;
+    border: none;
     margin-left: 20px;
+    background-color: purple;
 }
 
 /* HOME PAGE IMAGE */
@@ -381,7 +384,37 @@ li{
 }
 
 @media (max-width: 500px){
+    .icon__container{
+        width: 34%;
+    }
+    
     .card{
         width: 70%;
+    }
+
+    .home__title{
+        font-size: 45px;
+        width: 90%;
+    }
+
+    .home__subtitle{
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .home__search--container{
+        width: 92%;
+    }
+
+    .home__search{
+        width: 99%;
+        padding: 20px 0;
+        font-size: 17px;
+    }
+
+    .search__button{
+        margin: 20px 0;
+        padding: 8px;
+        background-color: purple;
     }
 }
