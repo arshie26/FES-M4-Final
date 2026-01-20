@@ -17,55 +17,17 @@ i{
     margin: 0 auto;
 }
 
-/* LANDING */
-
-#landing{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 45vh;
-}
-
-#home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.overlay{
-    background-image: url('https://dev.d24jig8s1lr7n9.amplifyapp.com/img/carpark.8742e246.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 45vh;
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: -1;
-}
-
-.overlay:after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: grey;
-    opacity: 0.7;
-    height: 100%;
-    width: 100%;
-}
-
 /* NAVIGATION */
 
 .nav__container{
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 24px;
 }
 
 .icon__container{
-    width: 15%;
+    width: 12%;
 }
 
 .icon{
@@ -75,21 +37,28 @@ i{
 li{
     list-style-type: none;
     cursor: pointer;
+    padding: 16px 32px;
 }
 
 .nav__links{
     display: flex;
     justify-content: center;
+    
 }
 
 .nav__link{
     color: white;
-    margin-left: 40px;
 }
 
 .nav__link--home{
     color: black;
-    margin-left: 40px;
+    font-size: 20px;
+}
+
+.nav__link--primary{
+    background-color: purple;
+    padding: 14px 44px;
+    border-radius: 30px;
 }
 
 .link__hover--effect{
@@ -174,29 +143,112 @@ li{
     align-items: center;
 }
 
-.hero__container{
+/*.hero__container{
     width: 70%;
     text-align: center;
-}
+}*/
 
 .home__title{
     color: purple;
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
-    width: 80%;
+    width: 90%;
 }
 
 .home__subtitle{
     color: purple;
     font-size: 30px;
+    width: 90%;
+    text-align: center;
 }
 
 .purple{
     color: purple;
 }
 
-.home__title, .home__subtitle, .home__search--container{
+.home__title, .home__subtitle {
     margin: 20px 0;
+}
+
+.home__search--container{
+    margin-top: 20px;
+}
+
+/* HOME PAGE SEARCH */
+
+.home__search--container{
+    display: flex;
+    max-width: 700px;
+    width: 95%;
+}
+
+.home__search{
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-size: 24px;
+    padding-right: 125px;
+    width: 100%;
+}
+
+.fa-magnifying-glass{
+    font-size: 40px;
+    filter: invert(1);
+}
+
+.search__button{
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 20px;
+    background-color: purple;
+}
+
+/* HOME PAGE IMAGE */
+
+.home__img--container{
+    width: 49%;
+}
+
+.home__image{
+    width: 100%;
+}
+
+/* LANDING */
+
+#landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45vh;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay{
+    background-image: url('https://dev.d24jig8s1lr7n9.amplifyapp.com/img/carpark.8742e246.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
 }
 
 /* HERO CONTENT */
@@ -221,42 +273,6 @@ li{
     border-radius: 30px;
 }
 
-/* HOME PAGE HERO */
-
-.home__search--container{
-    display: flex;
-    width: 70%;
-}
-
-.home__search{
-    padding: 20px 30px;
-    border-radius: 20px;
-    width: 100%;
-    font-size: 24px;
-}
-
-.fa-solid{
-    font-size: 40px;
-    filter: invert(1);
-}
-
-.search__button{
-    padding: 15px 50px;
-    border-radius: 20px;
-    border: none;
-    margin-left: 20px;
-    background-color: purple;
-}
-
-/* HOME PAGE IMAGE */
-
-.home__img--container{
-    width: 50%;
-}
-
-.home__image{
-    width: 100%;
-}
 
 /* RESULTS */
 
@@ -339,6 +355,14 @@ li{
 
 @media (max-width: 768px){
     
+    .home__title{
+        font-size: 45px;
+    }
+
+    .home__search{
+        font-size: 18px;
+    }
+
     #results{
         width: 100%;
         max-width: 600px;
@@ -354,6 +378,14 @@ li{
 
     .nav__links{
         display: none;
+    }
+
+    .home__search--container{
+        width: 90%;
+    }
+
+    .home__search{
+        font-size: 16px;
     }
 
     .search{    
@@ -377,9 +409,26 @@ li{
         text-align: left;
     }
 
+    .home__subtitle{
+        text-align: left;
+    }
+
     .home__search--container{
         flex-direction: column;
         width: 95%;
+    }
+
+    .home__search{
+        padding: 20px 0;
+        width: 99%;
+    }
+
+    .search__button{
+        margin: 20px 0;
+    }
+
+    .home__img--container{
+        display: none;
     }
 }
 
