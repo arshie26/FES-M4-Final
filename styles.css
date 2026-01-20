@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -22,12 +26,16 @@ i{
 .nav__container{
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 24px;
+    max-width: 1300px;
+    margin: 16px 0;
+    width: 100vw;
 }
 
 .icon__container{
-    width: 12%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .icon{
@@ -43,7 +51,6 @@ li{
 .nav__links{
     display: flex;
     justify-content: center;
-    
 }
 
 .nav__link{
@@ -59,6 +66,7 @@ li{
     background-color: purple;
     padding: 14px 44px;
     border-radius: 30px;
+    color: white;
 }
 
 .link__hover--effect{
@@ -143,16 +151,12 @@ li{
     align-items: center;
 }
 
-/*.hero__container{
-    width: 70%;
-    text-align: center;
-}*/
-
 .home__title{
     color: purple;
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
     width: 90%;
+    animation: fade-up 800ms;
 }
 
 .home__subtitle{
@@ -160,6 +164,19 @@ li{
     font-size: 30px;
     width: 90%;
     text-align: center;
+    animation: fade-up 800ms;
+}
+
+@keyframes fade-up{
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .purple{
@@ -167,7 +184,7 @@ li{
 }
 
 .home__title, .home__subtitle {
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .home__search--container{
@@ -188,6 +205,7 @@ li{
     font-size: 24px;
     padding-right: 125px;
     width: 100%;
+    animation: fade-up 800ms;
 }
 
 .fa-magnifying-glass{
@@ -203,10 +221,12 @@ li{
     background-color: purple;
 }
 
+
+
 /* HOME PAGE IMAGE */
 
 .home__img--container{
-    width: 49%;
+    width: 70vh;
 }
 
 .home__image{
@@ -257,6 +277,7 @@ li{
     font-size: 48px;
     margin-bottom: 32px;
     color: white;
+    text-align: center;
 }
 
 .browse__container{
@@ -264,15 +285,40 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    max-width: 650px;
+}
+
+.find__search--container{
+    display: flex;
+    max-width: 700px;
+    width: 95%;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .search{
-    padding: 20px 220px;
+    padding: 20px 20px;
     border-radius: 30px;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
 }
 
+.find__search--button{
+    border-radius: 20px;
+    border: none;
+    margin-right: 20px;
+    color: purple;
+    z-index: 1;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.find__search--button i{
+    filter: invert(0);
+}
 
 /* RESULTS */
 
@@ -352,15 +398,39 @@ li{
     margin-right: 10px;
 }
 
-
-@media (max-width: 768px){
+@media(max-height: 600px){
+    .nav__container{
+        margin-bottom: 0;
+    }
     
+    .home__title, .home__subtitle{
+        margin: 8px 0;
+    }
+
     .home__title{
         font-size: 45px;
     }
+}
+
+@media (max-width: 768px){
 
     .home__search{
         font-size: 18px;
+    }
+
+    .nav__links{
+        display: none;
+    }
+
+    .open__menu .nav__mobile{
+        opacity: 0.9;
+        transform: translateX(0);
+    }
+
+    .btn__menu--open{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
     }
 
     #results{
@@ -376,10 +446,6 @@ li{
 
 @media (max-width: 630px){
 
-    .nav__links{
-        display: none;
-    }
-
     .home__search--container{
         width: 90%;
     }
@@ -393,14 +459,7 @@ li{
         width: 95%;
     }
 
-    .open__menu .nav__mobile{
-        opacity: 0.9;
-        transform: translateX(0);
-    }
-
-    .btn__menu--open{
-        display: flex;
-    }
+    
 
 }
 
@@ -433,9 +492,6 @@ li{
 }
 
 @media (max-width: 500px){
-    .icon__container{
-        width: 34%;
-    }
     
     .card{
         width: 70%;
@@ -443,12 +499,10 @@ li{
 
     .home__title{
         font-size: 45px;
-        width: 90%;
     }
 
     .home__subtitle{
         font-size: 25px;
-        width: 90%;
     }
 
     .home__search--container{

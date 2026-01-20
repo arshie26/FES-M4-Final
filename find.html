@@ -62,8 +62,13 @@
             </div>
         </nav>
         <div class="browse__container">
-                <h1 class="hero__title">Browse our cars</h1>
+            <h1 class="hero__title">Browse our cars</h1>
+            <div class="find__search--container">
                 <input class="search" placeholder="Search by Make, Model or Keyword" oninput="getMovies(event)">
+                <button class="find__search--button" onclick = "searchFromHome(event)">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
         </div>
         <div class="overlay">    
         </div>
