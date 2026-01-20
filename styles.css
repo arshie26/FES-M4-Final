@@ -67,13 +67,21 @@ li{
     padding: 14px 44px;
     border-radius: 30px;
     color: white;
+    transition: all 400ms ease;
 }
 
-.link__hover--effect{
+
+.nav__link--primary:hover{
+    background-color: red;
+}
+
+.link__hover--effect,
+.link__hover--effect-black{
     position: relative;
 }
 
-.link__hover--effect:after{
+.link__hover--effect:after,
+.link__hover--effect-black:after{
     position: absolute;
     content: "";
     bottom: -3px;
@@ -84,10 +92,16 @@ li{
     transition: all 300ms ease;
 }
 
-.link__hover--effect:hover:after{
+.link__hover--effect:hover:after,
+.link__hover--effect-black:hover:after{
     width: 100%;
     left: 0;
 }
+
+.link__hover--effect-black:after{
+    background-color: black;
+}
+
 
 /* MOBILE NAV */
 
@@ -221,7 +235,14 @@ li{
     background-color: purple;
 }
 
+.search__button:focus{
+    background-color: black;
+}
 
+.search__button .movies__loading--spinner{
+    color: white;
+    font-size: 40px;
+}
 
 /* HOME PAGE IMAGE */
 
@@ -314,6 +335,11 @@ li{
     z-index: 1;
     background-color: transparent;
     cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.find__search--button:hover{
+    color: red;
 }
 
 .find__search--button i{

@@ -58,11 +58,12 @@ function renderMovies(moviesList){
 async function searchFromHome(event){
     let query = document.querySelector(".home__search");
     let buttonWrapper = document.querySelector(".search__button");
+    buttonWrapper.focus();
     buttonWrapper.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
     console.log("Search term was ", query.value);
     let moviesPromise = await fetch(`https://www.omdbapi.com/?s=${query.value}&apikey=b971c236`);
     let moviesList = await moviesPromise.json();
     console.log(moviesList);
     localStorage.setItem("movies", JSON.stringify(moviesList));
-    window.location.href="http://127.0.0.1:8080/FES-M4-Final/find.html";
+    /*window.location.href="http://127.0.0.1:8080/FES-M4-Final/find.html";*/
 }
