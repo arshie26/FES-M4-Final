@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/69b822bc74.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
-    <script src="find.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <section id="home">
@@ -61,11 +61,11 @@
     <section id="hero">
         <div class="container">
             <div class="hero__wrapper">
-                <h1 class="home__title">Australia's most awarded car subscription platform</h1>
-                <h2 class="home__subtitle">FIND YOUR DREAM CAR WITH <span class="purple">BLINKER</span></h2>
+                <h1 class="home__title">Australia's most awarded movie subscription platform</h1>
+                <h2 class="home__subtitle">WATCH YOUR FAVORITE MOVIES WITH <span class="purple">BLINKER</span></h2>
                 <div class="home__search--container">
-                    <input class="home__search" placeholder="Search by Model, Make or Keyword">
-                    <button class="search__button" onclick = "searchFromHome(event)">
+                    <input class="home__search" placeholder="Search by Title">
+                    <button class="search__button" onclick = "searchFromHome(event)" onkeydown="searchFromHome(event)">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
