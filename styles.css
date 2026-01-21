@@ -32,7 +32,7 @@ i{
 }
 
 .icon__container{
-    width: 150px;
+    width: 200px;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -63,7 +63,7 @@ li{
 }
 
 .nav__link--primary{
-    background-color: purple;
+    background-color: #6030b1;
     padding: 14px 44px;
     border-radius: 30px;
     color: white;
@@ -72,7 +72,7 @@ li{
 
 
 .nav__link--primary:hover{
-    background-color: red;
+    background-color: #ff328f;
 }
 
 .link__hover--effect,
@@ -166,25 +166,29 @@ li{
 }
 
 .home__title{
-    color: purple;
+    color: #6030b1;
     font-size: 50px;
     text-align: center;
     width: 90%;
-    animation: fade-up 800ms;
+    animation: fade-up 1200ms 400ms backwards;
 }
 
 .home__subtitle{
-    color: purple;
+    color: black;
     font-size: 30px;
     width: 90%;
     text-align: center;
-    animation: fade-up 800ms;
+    animation: fade-up2 1200ms 700ms backwards;
 }
 
 @keyframes fade-up{
     0%{
-        transform: translateY(50%);
+        transform: translateY(100%);
         opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
     }
 
     100%{
@@ -193,8 +197,34 @@ li{
     }
 }
 
+@keyframes fade-up2{
+    0%{
+        transform: translateY(300%);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .purple{
-    color: purple;
+    color: #6030b1;
 }
 
 .home__title, .home__subtitle {
@@ -211,6 +241,7 @@ li{
     display: flex;
     max-width: 700px;
     width: 95%;
+    animation: fade-in 2000ms 1000ms backwards;
 }
 
 .home__search{
@@ -219,7 +250,7 @@ li{
     font-size: 24px;
     padding-right: 125px;
     width: 100%;
-    animation: fade-up 800ms;
+    
 }
 
 .fa-magnifying-glass{
@@ -232,7 +263,11 @@ li{
     border-radius: 20px;
     border: none;
     margin-left: 20px;
-    background-color: purple;
+    background-color: #6030b1;
+}
+
+.search__button:hover{
+    background-color: #ff328f;
 }
 
 .search__button:focus{
@@ -331,7 +366,7 @@ li{
     border-radius: 20px;
     border: none;
     margin-right: 20px;
-    color: purple;
+    color: #6030b1;
     z-index: 1;
     background-color: transparent;
     cursor: pointer;
@@ -339,7 +374,7 @@ li{
 }
 
 .find__search--button:hover{
-    color: red;
+    color: #ff328f;
 }
 
 .find__search--button i{

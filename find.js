@@ -65,5 +65,24 @@ async function searchFromHome(event){
     let moviesList = await moviesPromise.json();
     console.log(moviesList);
     localStorage.setItem("movies", JSON.stringify(moviesList));
-    /*window.location.href="http://127.0.0.1:8080/FES-M4-Final/find.html";*/
+    window.location.href="http://127.0.0.1:8080/FES-M4-Final/find.html";
+}
+
+function goHome(){
+    console.log(window.location);
+    let url = window.location.href;
+    if(window.location.href.includes("find.html")){
+        url = window.location.href.slice(0, window.location.href.length-9);
+        url += "index.html"
+    }
+    window.location.href=url;
+}
+
+function goFind(){
+    let url = window.location.href;
+    if(window.location.href.includes("index.html")){
+        url = window.location.href.slice(0, window.location.href.length-10);
+        url += "find.html";
+    }
+    window.location.href=url;
 }
