@@ -36,6 +36,7 @@ function goHome(){
 
 function goFind(){
     let url = window.location.href;
+    console.log(url);
     if(window.location.href.includes("index.html")){
         url = window.location.href.slice(0, window.location.href.length-10);
     }
