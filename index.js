@@ -26,7 +26,7 @@ async function searchFromHome(event){
     let moviesList = await moviesPromise.json();
     console.log(moviesList);
     localStorage.setItem("movies", JSON.stringify(moviesList));
-    window.location.href="http://127.0.0.1:8080/FES-M4-Final/find.html";
+    goFind();
 }
 
 function goHome(){
