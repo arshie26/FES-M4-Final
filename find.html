@@ -13,7 +13,7 @@
         <nav>
             <div class="nav__container">
                 <figure class="icon__container">
-                    <img class="icon" src="blinker-icon.png">
+                    <img class="icon" src="whitelogo.png">
                 </figure>
                 <ul class="nav__links">
                     <li>
@@ -32,7 +32,7 @@
                         nav__link--primary">Contact</a>
                     </li>
                 </ul>
-                <button class="btn__menu btn__menu--open" onclick = "openMenu()">
+                <button class="btn__menu btn__menu--open find" onclick = "openMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="nav__mobile">
@@ -42,19 +42,15 @@
                     <ul class="mobile__nav--links">
                         <li>
                             <a class="
-                            nav__link
-                            link__hover--effect">Home</a>
+                            nav__link" onclick="goHome()">Home</a>
                         </li>
                         <li>
                             <a class="
-                            nav__link
-                            link__hover--effect">Find your car</a>
+                            nav__link" onclick="goFind()">Find your car</a>
                         </li>
                         <li>
                             <a class="
-                            nav__link
-                            link__hover--effect
-                            nav__link--primary">Contact</a>
+                            nav__link">Contact</a>
                         </li>
                     </ul>
                 </div>

@@ -55,6 +55,7 @@ li{
 
 .nav__link{
     color: white;
+    font-size: 20px;
 }
 
 .nav__link--home{
@@ -116,7 +117,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
     transform: translateX(100%);
     transition: all 400ms ease;
 }
@@ -130,7 +131,7 @@ li{
 }
 
 .nav__mobile li{
-    margin: 50px 0;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -139,6 +140,10 @@ li{
     background-color: transparent;
     cursor: pointer;
     border: none;
+}
+
+.btn__menu--open.find{
+    filter: invert(1);
 }
 
 .btn__menu--close{
@@ -151,9 +156,10 @@ li{
 }
 
 .nav__mobile .nav__link{
-    color: black;
+    color: #6030b1;
     z-index: 2;
-    margin: 0
+    margin: 0;
+    font-size: 30px;
 }
 
 
@@ -321,8 +327,7 @@ li{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: grey;
-    opacity: 0.7;
+    background-color: rgba(41,25,71,.83);
     height: 100%;
     width: 100%;
 }
