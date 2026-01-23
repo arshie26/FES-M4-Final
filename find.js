@@ -1,8 +1,14 @@
 console.log("new page");
 
+let moviesList;
+
 if(localStorage.getItem("movies")){
-    let moviesList = JSON.parse(localStorage.getItem("movies"));
-    renderMovies(moviesList);
+    getMoviesFromStorage();
+}
+
+function getMoviesFromStorage(){
+    moviesList = JSON.parse(localStorage.getItem("movies"));
+    renderMovies();
 }
 
 function openMenu(){
@@ -19,14 +25,41 @@ async function getMovies(event){
         <div class="spinner__container">
             <i class="fas fa-spinner movies__loading--spinner"></i>
         </div>`;
-    let userSearch = event.target.value;
+    let query = document.querySelector(".search");
+    let userSearch = query.value;
     let moviesPromise = await fetch(`https://www.omdbapi.com/?s=${userSearch}&apikey=b971c236`);
-    let moviesList = await moviesPromise.json();
-    console.log(moviesList.Search);
-    renderMovies(moviesList);
-} 
+    moviesList = await moviesPromise.json();
+    renderMovies();
+}
 
-function renderMovies(moviesList){
+function renderMovies(filter){
+    console.log(filter);
+    if(filter === "year"){
+        console.log("filtering by year");
+        moviesList.Search = moviesList.Search.sort((a, b) => {
+            if(a.Year.includes("–")){
+                console.log("year has -");
+                return year = a.Year.substring(0,4) - b.Year;
+            } 
+            else if (b.Year.includes("–")){
+                console.log("year has -");
+                return a.Year - b.Year.substring(0,4);
+            }
+            return a.Year > b.Year;
+        });
+    }
+    else if(filter === "name"){
+        moviesList.Search = moviesList.Search.sort((a, b) => {
+            return b.Title < a.Title;
+        });
+    }
+    else{
+        moviesList.Search = moviesList.Search.sort((a, b) => {
+            return b.Type < a.Type;
+        })
+    }
+    console.log(moviesList);
+    localStorage.setItem("movies", JSON.stringify(moviesList))
     setTimeout(() => {    
         let cardsWrapper = document.querySelector(".cards");
         cardsWrapper.innerHTML = moviesList.Search.map((movie) => {
